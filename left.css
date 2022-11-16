@@ -1,0 +1,133 @@
+body {
+	width: 80%; 
+	/* background-color: #fffaf6;  */
+	font-family: verdana, sans-serif; }
+
+/* table.entire {
+	width: 800px; 
+	margin-left: auto; margin-right: auto;
+	text-align: left; } */
+
+
+a { 
+	color:#642351; 
+	text-decoration:underline; 
+} 
+a:hover,
+a:active { 
+color:#303b18; 
+background:transparent; 
+text-decoration:underline; 
+}
+a:visited { 
+color:#642351; 
+background:transparent; 
+text-decoration:underline; 
+}
+.indexdrop {
+	font-family: Arial, Helvetica, sans-serif;
+	OFFfont-size: 14px;
+}
+.textboxtitles {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	OFFfont-size: 10px;
+	color: #642351;
+
+}
+.m {     /* main body text*/
+	OFFfont-family: Georgia, Verdana, Arial, Helvetica, sans-serif;
+	color: #642351;
+
+}
+
+.h0 {   /* headers*/
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	OFFfont-size: 30px;
+	color: #33040c;
+	line-height: 32px; 
+
+}
+
+.h1 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	OFFfont-size: 22px;
+	color: #642351;
+	line-height: 30px; 
+
+}
+
+.h2 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	OFFfont-size: 20px;
+	color: #33040c;
+	line-height: 30px; 
+
+}
+
+.h3 {   
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	line-height: 20px;
+	color: #33040c; 
+	margin-bottom: 0.5em; }
+
+
+h1 { 
+	font-family: verdana, arial, sans-serif;
+	font-size: 140%;
+	font-weight: normal; }
+
+h3 { 
+	font-weight: normal; 
+	text-transform: uppercase; 
+	letter-spacing: 0.05em; }
+
+ul.contents { 
+	OFFfont-size: 120%; 
+	list-style: none; margin: 0; padding: 0; }
+ul.contents li { 
+	margin-bottom: 0.5em; }
+ul.contents small { color: #8f9d8e; }
+
+ul.books li { font-size: 80%; margin-bottom: 0; }
+
+
+ul.shortlist {
+	font-family: georgia, serif; 
+	font-size: 100%; 
+	margin-bottom: 1em; }
+ul.shortlist li {
+	margin-bottom: 0.25em; }
+
+div.coverbox {
+	font-family: verdana, sans-serif; 
+	float: right; 
+	font-size: 70%; 
+	margin-left: 1.5em;
+	text-align: center; }
+
+ul.gap li {
+	font-size: 90%; 
+	margin-bottom: 0.5em; 
+	line-height: 130%; }
+
+p { font-size: 90%; }
+
+ul.updates {
+	list-style: none; 
+	margin: 0; padding: 0; }
+
+ul.covers {
+	font-size: 80%; 
+	list-style: none;
+	margin: 0;
+	padding: 0; }
+ul.covers li {
+	text-align: center;
+	width: 200px;
+	height: 240px;
+	float: left; }
+
+img.iconleft {
+	border: 0;
+	float: left;
+	margin-right: 5px}
