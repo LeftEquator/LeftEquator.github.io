@@ -1,0 +1,197 @@
+
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="content-type" CONTENT="text/html; charset=UTF-8">
+<TITLE>Splendid Bush - Left of the Equator Press</TITLE><script type="text/javascript">if (top.location != self.location) top.location = self.location;</script><link rel="icon" href="favicon.ico" type="image/x-icon" /><link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+</HEAD>
+
+<link href="left.css" rel="stylesheet" type="text/css">
+
+<body>
+
+<table class="entire">
+
+
+<tr><td width="10%" valign="top"> <!-- left column --><br><p><br>
+
+
+
+</p></td width="80%">
+<td>
+ <p align="center" style="margin-bottom:0" width="80%"><a href="index.html"><img src="LOE.small.png" alt="Left of the Equator Press" title="Left of the Equator Press" ></a></p>
+
+<div style="color:#642351; font-size:1.8em; font-family:garamond; text-align:center; line-height:130%; margin-bottom:1em;">Books from Aotearoa for a world beyond capitalism and colonialism.</div>
+
+<div style="float:right; font-size:150%; text-align: center; margin-left: 1em; margin-bottom: 1em;">
+
+</div>
+
+
+<p><p>
+<table>
+
+
+
+<tr><td>
+<td width =310 valign=top>
+<img alt="Splendid Bush" title="Splendid Bush" style="padding:0px 10px;" src="SplendidBushMED.jpg" border="0">
+</td>
+<td>
+<span class="m">
+<i><b>Splendid Bush</i></b>
+<br><br>Queer poetry by Clare Havell-Shufflebotham.
+<br><br>Splendid Bush is a queer reckoning with love, its warpath, motherhood and ghosts (of capital, of violence, of sweet lemon trees). Part protection spell, part map of self-dissolution, this collection is an ode to hookgrass and an offering of dirt.  
+<br><br>The works are at times ruthless, at times tender nano-essays on the rebound, queer haunting, the parties you should have left, and all that you want to stay.  This is not a break up album, although the greatest hits do make an appearance. Rather, it takes the wounds that motherhood lays bare, and produces queer nature magic as antidote and as mirror.  
+<br><br>Written in the crucible that is suburbia with young children, Splendid Bush questions the spaces between ourselves and ‘nature’, macho colonial bodies, violent bodies of the state, and our own. Above all, it is about the power of Bush.
+<br><br>Havell-Shufflebotham arrived home to Aotearoa not long before the pandemic hit, after a decade in London and Berlin. She has a Masters in Documentary Practice and is currently writing up her PhD thesis on experimental strategies of anonymity in documentary film. 
+<br><br><i>Published December 2022. ISBN 9780473662639</i> 
+<br><br>
+<div id="smart-button-container">
+      <div style="text-align: center;">
+        <div style="margin-bottom: 1.25rem;">
+          <p>Buy Splendid Bush.</p>
+          <select id="item-options"><option value="SB with postage within Aotearoa" price="19">With postage within Aotearoa - 19 NZD</option><option value="SB with postage to Australia and South Pacific" price="30">With postage to Australia and South Pacific - 30 NZD</option><option value="SB with postage to the rest of the world" price="36">With postage to the rest of the world - 36 NZD</option></select>
+          <select style="visibility: hidden" id="quantitySelect"></select>
+        </div>
+      <div id="paypal-button-container"></div>
+      </div>
+    </div>
+    <script src="https://www.paypal.com/sdk/js?client-id=ASgoBKunmJGgzRLWtrhzl6RPVfGMgwNdrlL6Hvo31YZcWNO-H7L79PdZyosyaaTBxLpStNw6d-y6TNmn&enable-funding=venmo&locale=en_NZ&currency=NZD" data-sdk-integration-source="button-factory"></script>
+    <script>
+      function initPayPalButton() {
+        var shipping = 0;
+        var itemOptions = document.querySelector("#smart-button-container #item-options");
+    var quantity = parseInt();
+    var quantitySelect = document.querySelector("#smart-button-container #quantitySelect");
+    if (!isNaN(quantity)) {
+      quantitySelect.style.visibility = "visible";
+    }
+    var orderDescription = 'Buy Splendid Bush.';
+    if(orderDescription === '') {
+      orderDescription = 'Item';
+    }
+    paypal.Buttons({
+      style: {
+        shape: 'rect',
+        color: 'gold',
+        layout: 'vertical',
+        label: 'paypal',
+        
+      },
+      createOrder: function(data, actions) {
+        var selectedItemDescription = itemOptions.options[itemOptions.selectedIndex].value;
+        var selectedItemPrice = parseFloat(itemOptions.options[itemOptions.selectedIndex].getAttribute("price"));
+        var tax = (0 === 0 || false) ? 0 : (selectedItemPrice * (parseFloat(0)/100));
+        if(quantitySelect.options.length > 0) {
+          quantity = parseInt(quantitySelect.options[quantitySelect.selectedIndex].value);
+        } else {
+          quantity = 1;
+        }
+
+        tax *= quantity;
+        tax = Math.round(tax * 100) / 100;
+        var priceTotal = quantity * selectedItemPrice + parseFloat(shipping) + tax;
+        priceTotal = Math.round(priceTotal * 100) / 100;
+        var itemTotalValue = Math.round((selectedItemPrice * quantity) * 100) / 100;
+
+        return actions.order.create({
+          purchase_units: [{
+            description: orderDescription,
+            amount: {
+              currency_code: 'NZD',
+              value: priceTotal,
+              breakdown: {
+                item_total: {
+                  currency_code: 'NZD',
+                  value: itemTotalValue,
+                },
+                shipping: {
+                  currency_code: 'NZD',
+                  value: shipping,
+                },
+                tax_total: {
+                  currency_code: 'NZD',
+                  value: tax,
+                }
+              }
+            },
+            items: [{
+              name: selectedItemDescription,
+              unit_amount: {
+                currency_code: 'NZD',
+                value: selectedItemPrice,
+              },
+              quantity: quantity
+            }]
+          }]
+        });
+      },
+      onApprove: function(data, actions) {
+        return actions.order.capture().then(function(orderData) {
+          
+          // Full available details
+          console.log('Capture result', orderData, JSON.stringify(orderData, null, 2));
+
+          // Show a success message within this page, e.g.
+          const element = document.getElementById('paypal-button-container');
+          element.innerHTML = '';
+          element.innerHTML = '<h3>Thank you for your payment!</h3>';
+
+          // Or go to another URL:  actions.redirect('thank_you.html');
+
+        });
+      },
+      onError: function(err) {
+        console.log(err);
+      },
+    }).render('#paypal-button-container');
+  }
+  initPayPalButton();
+    </script>
+</span>
+</td>
+</td>
+</tr>
+
+
+
+
+
+
+
+</table>
+<p><p><p>
+Books can also be purchased by depositing the money to Left of the Equator Press 38-9000-0068209-21, and sending us a message or email with your name, postal address, and which book(s) you are after.
+<p align="center">
+
+<a href="index.html">home</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+<a href="https://facebook.us9.list-manage.com/subscribe?u=6050cc6e137825dc2c9ad4d86&id=a7fd29e536" target="_">pānui / newsletter</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+<a href="mailto:LeftEquator@gmail.com">LeftEquator@gmail.com</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+<a rel="me" href="https://kolektiva.social/@LeftEquator" target="_">Mastodon</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+<a href="https://Facebook.com/LeftEquator" target="_">FB</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+<a href="https://instagram.com/LeftEquator" target="_">IG</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+<a href="https://twitter.com/LeftEquator" target="_">TW</a>
+</p>
+
+
+
+<div style="color:#642351; font-size:1.3em; font-family:garamond; text-align:center; line-height:130%; width:600px; margin-top:1em;">
+</div>
+</div>
+
+
+</td>
+
+
+
+<td width="10%" valign="top">
+</td>
+
+</tr></table>
+
+</body>
+</html>
