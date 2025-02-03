@@ -1,0 +1,207 @@
+
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="content-type" CONTENT="text/html; charset=UTF-8">
+<TITLE>Visas Now! - Left of the Equator Press</TITLE><script type="text/javascript">if (top.location != self.location) top.location = self.location;</script><link rel="icon" href="favicon.ico" type="image/x-icon" /><link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+</HEAD>
+
+<link href="left.css" rel="stylesheet" type="text/css">
+
+<body>
+
+<table class="entire">
+
+
+<tr><td width="10%" valign="top"> <!-- left column --><br><p><br>
+
+
+
+</p></td width="80%">
+<td>
+ <p align="center" style="margin-bottom:0" width="80%"><a href="index.html"><img src="LOE.small.png" alt="Left of the Equator Press" title="Left of the Equator Press" ></a></p>
+
+<div style="color:#642351; font-size:1.8em; font-family:garamond; text-align:center; line-height:130%; margin-bottom:1em;">Books from Aotearoa for a world beyond capitalism and colonialism.</div>
+
+<div style="float:right; font-size:150%; text-align: center; margin-left: 1em; margin-bottom: 1em;">
+
+</div>
+
+
+<p><p>
+<table>
+
+
+
+<tr><td>
+<td class="deviceWidth" width="50%" valign=top>
+<br>
+<img alt="Visas Now" title="Visas Now" style="padding:0px 10px;" src="VisasNow.jpg" border="0">
+</td>
+<td class="deviceWidth" width="50%">
+<span class="m">
+<br>
+<i><b>Visas Now! : Aotearoa’s response to global refugee emergencies</i></b>
+<br><br>by Murdoch Stephens
+<br><br>with a foreword by Ibrahim Omer
+<br><br>featuring reflections on emergency intakes from former refugees and community members; including  Behrouz Boochani, Rabia Talal Almbaid,  Batool, Dr Arif Ali, Dr Tariq Habibyar, Kate Turska, and Rizwangul NurMuhammad
+<br><br><b>Book Launch @ Unity Wellington, Willis Street 3rd April 6pm</b>
+<br><br><i>Visas Now!</i> zooms in on the high-stakes, one off intakes of Syrians, Afghans and Ukrainians in the past decade. The book also includes nine people who share how their communities came together to seek emergency refugee intakes, including some whose calls went unanswered. The book is essential reading for anyone interested in solidarity and advocating for humanitarian protection in a time of crisis.
+<br><br>
+<b>Murdoch Stephens</b> founded the successful Double the Refugee Quota campaign in 2013. Since then he has worked as a researcher and policy expert for universities and not for profits. He is an author, publisher and Fulbright Scholar. His previous non-fiction includes the 2018 book Doing Our Bit: the campaign to double the refugee quota.
+
+<b>Ibrahim Omer</b> came to New Zealand as a quota refugee in 2008, In 2020 he was elected as a Member of Parliament.
+
+
+<br><br>Published April 4 2025. ISBN 9780473737115 
+
+<div id="smart-button-container">
+      <div style="text-align: center;">
+        <div style="margin-bottom: 1.25rem;">
+          <p><b>Pre-order <i>Visas Now</i> now!</b></p>
+          <select id="item-options"><option value="Visas Now with postage within New Zealand / Aotearoa" price="30">With postage within Aotearoa - 30 NZD</option><option value="Visas Now with postage to Australia and South Pacific" price="40">With postage to Australia and South Pacific - 40 NZD</option><option value="Visas Now with postage to the rest of the world" price="51">With airmail postage to the rest of the world - 51 NZD</option></select>
+          <select style="visibility: hidden" id="quantitySelect"></select>
+        </div>
+      <div id="paypal-button-container"></div>
+      </div>
+    </div>
+    <script src="https://www.paypal.com/sdk/js?client-id=ASgoBKunmJGgzRLWtrhzl6RPVfGMgwNdrlL6Hvo31YZcWNO-H7L79PdZyosyaaTBxLpStNw6d-y6TNmn&enable-funding=venmo&locale=en_NZ&currency=NZD" data-sdk-integration-source="button-factory"></script>
+    <script>
+      function initPayPalButton() {
+        var shipping = 0;
+        var itemOptions = document.querySelector("#smart-button-container #item-options");
+    var quantity = parseInt();
+    var quantitySelect = document.querySelector("#smart-button-container #quantitySelect");
+    if (!isNaN(quantity)) {
+      quantitySelect.style.visibility = "visible";
+    }
+    var orderDescription = 'Buy Visa Now.';
+    if(orderDescription === '') {
+      orderDescription = 'Item';
+    }
+    paypal.Buttons({
+      style: {
+        shape: 'rect',
+        color: 'gold',
+        layout: 'vertical',
+        label: 'paypal',
+        
+      },
+      createOrder: function(data, actions) {
+        var selectedItemDescription = itemOptions.options[itemOptions.selectedIndex].value;
+        var selectedItemPrice = parseFloat(itemOptions.options[itemOptions.selectedIndex].getAttribute("price"));
+        var tax = (0 === 0 || false) ? 0 : (selectedItemPrice * (parseFloat(0)/100));
+        if(quantitySelect.options.length > 0) {
+          quantity = parseInt(quantitySelect.options[quantitySelect.selectedIndex].value);
+        } else {
+          quantity = 1;
+        }
+
+        tax *= quantity;
+        tax = Math.round(tax * 100) / 100;
+        var priceTotal = quantity * selectedItemPrice + parseFloat(shipping) + tax;
+        priceTotal = Math.round(priceTotal * 100) / 100;
+        var itemTotalValue = Math.round((selectedItemPrice * quantity) * 100) / 100;
+
+        return actions.order.create({
+          purchase_units: [{
+            description: orderDescription,
+            amount: {
+              currency_code: 'NZD',
+              value: priceTotal,
+              breakdown: {
+                item_total: {
+                  currency_code: 'NZD',
+                  value: itemTotalValue,
+                },
+                shipping: {
+                  currency_code: 'NZD',
+                  value: shipping,
+                },
+                tax_total: {
+                  currency_code: 'NZD',
+                  value: tax,
+                }
+              }
+            },
+            items: [{
+              name: selectedItemDescription,
+              unit_amount: {
+                currency_code: 'NZD',
+                value: selectedItemPrice,
+              },
+              quantity: quantity
+            }]
+          }]
+        });
+      },
+      onApprove: function(data, actions) {
+        return actions.order.capture().then(function(orderData) {
+          
+          // Full available details
+          console.log('Capture result', orderData, JSON.stringify(orderData, null, 2));
+
+          // Show a success message within this page, e.g.
+          const element = document.getElementById('paypal-button-container');
+          element.innerHTML = '';
+          element.innerHTML = '<h3>Thank you for your payment!</h3>';
+
+          // Or go to another URL:  actions.redirect('thank_you.html');
+
+        });
+      },
+      onError: function(err) {
+        console.log(err);
+      },
+    }).render('#paypal-button-container');
+  }
+  initPayPalButton();
+    </script>
+
+
+</span>
+
+</td>
+
+</td>
+</tr>
+
+
+
+
+
+
+</table>
+<p><p><p>
+
+Books can also be purchased by depositing the money to Left of the Equator Press 38-9000-0068209-21, and sending us a message or email with your name, postal address, and which book(s) you are after.
+<p align="center">
+
+<a href="index.html">home</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+<a href="https://facebook.us9.list-manage.com/subscribe?u=6050cc6e137825dc2c9ad4d86&id=a7fd29e536" target="_">pānui / newsletter</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+<a href="mailto:LeftEquator@gmail.com">LeftEquator@gmail.com</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+<a href="https://Facebook.com/LeftEquator" target="_">FB</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+<a href="https://instagram.com/LeftEquator" target="_">IG</a>
+</p>
+
+
+
+<div style="color:#642351; font-size:1.3em; font-family:garamond; text-align:center; line-height:130%; width:600px; margin-top:1em;">
+</div>
+</div>
+
+
+</td>
+
+
+
+<td width="10%" valign="top">
+</td>
+
+</tr></table>
+
+</body>
+</html>
